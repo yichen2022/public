@@ -1,0 +1,20 @@
+INSERT INTO PRODUCT (ProductID, StoreID, Name, Quantity, Availability, Price, Type) VALUES (21, 5, 'sgagcidpy', 2, 'Available', 5, '3d');
+
+INSERT INTO ORDERS (Order_Number, Order_Date, CartID) VALUES (21, '2020-11-15', 1);
+
+INSERT INTO ACCOUNT (Account_number, Username,  Street, ZipCode, Karma_points, Phone_number, FName, LName) VALUES (42, 'yichensycamore@gmail.com', '750 Old Lancaster Rd.', '19312', 500, '513-903-0084', 'Yi', 'Chen');
+INSERT INTO ACCOUNT (Account_number, Username,  Street, ZipCode, Karma_points, Phone_number, FName, LName) VALUES (43, 'brutusbuckeye@gmail.com', '2020 Ohio state.', '12345', 100, '123-123-1234', 'Brutus', 'Buckeye');
+
+INSERT INTO SELLER (Account_number) VALUES (42);
+INSERT INTO BUYER (Account_number) VALUES (43);
+
+
+DELETE FROM PRODUCT WHERE StoreID = 20;
+
+DELETE FROM ACCOUNT WHERE Account_number = 40;
+DELETE FROM ACCOUNT WHERE Account_number = 41;
+
+DELETE FROM BUYER WHERE Account_number = 30;
+DELETE FROM SELLER WHERE Account_number = 20;
+
+DELETE FROM ORDERS WHERE Order_number = 21;
