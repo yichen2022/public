@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <link rel='stylesheet' type='text/css' href='style.css'>
+  <title>Functional set game</title>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+<div id="pregame">
+  <p>Play against the Computer!</p>
+  <p>Please select CPU difficulty:</p>
+  <input type="radio" id="easy" name="difficulty" value="0">
+  <label for="easy">Easy</label><br>
+  <input type="radio" id="medium" name="difficulty" value="1" checked>
+  <label for="medium">Medium</label><br>
+  <input type="radio" id="hard" name="difficulty" value="2">
+  <label for="hard">Hard</label>
+  <button type="button" id="start_game">Begin</button>
+  <p>Lifetime Statistics:</p>
+  <ul id="stats">
+    <li class="stat" id="num_games" title="Number of Games"></li>
+    <li class="stat" id="num_reshuffles" title="Num of Reshuffles"> </li>
+    <li class="stat" id="num_incorrect_answers" title="Number of Incorrect Answers"></li>
+    <li class="stat" id="avg_accuracy" title="Average Accuracy"></li>
+    <li class="stat" id="num_deals" title="Number of Deals"></li>
+    <li class="stat" id="num_correct_answers" title="Number of Correct Answers"></li>
+    <li class="stat" id="chance_of_no_set" title="Probability of Selecting Reshuffle"></li>
+  </ul>
+</div>
+<div id="game">
+  <table id="active_cards">
+    <tr id="row1">
+      <td class="card" id="0"></td>
+      <td class="card" id="1"></td>
+      <td class="card" id="2"></td>
+      <td class="card" id="3"></td>
+    </tr>
+    <tr id="row2">
+      <td class="card" id="4"></td>
+      <td class="card" id="5"></td>
+      <td class="card" id="6"></td>
+      <td class="card" id="7"></td>
+    </tr>
+    <tr id="row3">
+      <td class="card" id="8"></td>
+      <td class="card" id="9"></td>
+      <td class="card" id="10"></td>
+      <td class="card" id="11"></td>
+    </tr>
+  </table>
+  <button type="button" id="reshuffle">Reshuffle</button>
+  <button type="button" id="hint">Need Hint?</button>
+</div>
+<div id="postgame">
+  <p id="end_game_message"></p>
+</div>
+</body>
+</html>

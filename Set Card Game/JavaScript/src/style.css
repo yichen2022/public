@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgreen;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 15px;
+}
+
+td {
+    background-color: white;
+    border: 5px solid #bfbfbf;
+}
+
+td {
+    height: 80px;
+    width: 135px;
+    vertical-align: center;
+    text-align: center;
+}
+
+button {
+    margin-left: 400px;
+    margin-right: 300px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin: 1em 0 1em;
+    padding-left: 40px;
+}
+
+#r4 {
+    visibility: hidden;
+}
+
+#end_game_message {
+    font-size: 50px;
+}
+
+

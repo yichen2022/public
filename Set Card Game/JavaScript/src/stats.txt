@@ -1,0 +1,7 @@
+num_incorrect_answers: 0
+avg_accuracy: 0
+num_deals: 0
+num_games: 0
+num_correct_answers: 0
+chance_of_no_set: 0
+num_reshuffles: 0
