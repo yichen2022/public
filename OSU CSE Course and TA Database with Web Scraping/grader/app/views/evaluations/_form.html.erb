@@ -1,0 +1,89 @@
+<%= form_with(model: evaluation, local: true) do |form| %>
+  <% if evaluation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(evaluation.errors.count, "error") %> prohibited this evaluation from being saved:</h2>
+
+      <ul>
+        <% evaluation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= form.label :Instructor_Name %>
+    <%= form.text_field :InstructorName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Student_Name %>
+    <%= form.text_field :StudentName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Course_Number %>
+    <%= form.number_field :CourseNumber %>
+  </div>
+
+  <p>On a scale from 1 to 10, rate the following characteristics. (1 worst, 10 best)</p>
+
+  <div class="field">
+    <%= form.label :Dedication %>
+    <%= form.number_field :Dedication %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Performance %>
+    <%= form.number_field :Performance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cooperation %>
+    <%= form.number_field :Cooperation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Initiative %>
+    <%= form.number_field :Initiative %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Communication %>
+    <%= form.number_field :Communication %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Character %>
+    <%= form.number_field :Character %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Responsiveness %>
+    <%= form.number_field :Responsiveness %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Personality %>
+    <%= form.number_field :Personality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Appearance %>
+    <%= form.number_field :Appearance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :WorkHabit %>
+    <%= form.number_field :WorkHabit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grader_application_id %>
+    <%= form.number_field :grader_application_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

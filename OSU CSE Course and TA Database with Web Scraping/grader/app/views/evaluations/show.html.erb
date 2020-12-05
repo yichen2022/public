@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Instructor name:</strong>
+  <%= @evaluation.InstructorName %>
+</p>
+
+<p>
+  <strong>Student name:</strong>
+  <%= @evaluation.StudentName %>
+</p>
+
+<p>
+  <strong>Course number:</strong>
+  <%= @evaluation.CourseNumber %>
+</p>
+
+<p>
+  <strong>Dedication:</strong>
+  <%= @evaluation.Dedication %>
+</p>
+
+<p>
+  <strong>Performance:</strong>
+  <%= @evaluation.Performance %>
+</p>
+
+<p>
+  <strong>Cooperation:</strong>
+  <%= @evaluation.Cooperation %>
+</p>
+
+<p>
+  <strong>Initiative:</strong>
+  <%= @evaluation.Initiative %>
+</p>
+
+<p>
+  <strong>Communication:</strong>
+  <%= @evaluation.Communication %>
+</p>
+
+<p>
+  <strong>Character:</strong>
+  <%= @evaluation.Character %>
+</p>
+
+<p>
+  <strong>Responsiveness:</strong>
+  <%= @evaluation.Responsiveness %>
+</p>
+
+<p>
+  <strong>Personality:</strong>
+  <%= @evaluation.Personality %>
+</p>
+
+<p>
+  <strong>Appearance:</strong>
+  <%= @evaluation.Appearance %>
+</p>
+
+<p>
+  <strong>Workhabit:</strong>
+  <%= @evaluation.WorkHabit %>
+</p>
+
+<p>
+  <strong>Grader application:</strong>
+  <%= @evaluation.grader_application_id %>
+</p>
+
+<%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
+<%= link_to 'Back', evaluations_path %>

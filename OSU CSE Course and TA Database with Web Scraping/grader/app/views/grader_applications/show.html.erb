@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @grader_application.Name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @grader_application.Email %>
+</p>
+
+<p>
+  <strong>GPA:</strong>
+  <%= @grader_application.GPA %>
+</p>
+
+<p>
+  <strong>Interested course:</strong>
+  <%= @grader_application.InterestedCourses %>
+</p>
+
+<p>
+  <strong>Available Times:</strong>
+  <%= @grader_application.AvailableTimes %>
+</p>
+
+<p>
+  <strong>Course section:</strong>
+  <%= @grader_application.course_section_id %>
+</p>
+
+<%= link_to 'Edit', edit_grader_application_path(@grader_application) %> |
+<%= link_to 'Back', grader_applications_path %>
