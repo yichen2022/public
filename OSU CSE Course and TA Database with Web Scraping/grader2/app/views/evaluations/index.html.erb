@@ -1,0 +1,72 @@
+<style>
+h1 {
+    	background-color: red;
+    	color: white;
+    	text-align: center;
+    	font-family: serif;
+    	padding: 50px;
+    	font-size: 24px;
+    }
+table {
+	background-color: #d4d4d4;
+	font-family: serif;
+	color: white;
+}
+table tbody tr td{
+    	font-family: sans-serif;
+    }
+</style>
+
+<p id="notice"><%= notice %></p>
+<%= link_to '<button type="button">Recommendations</button>'.html_safe, recommendations_path %>
+<h1>Evaluations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Instructor name</th>
+      <th>Student name</th>
+      <th>Course number</th>
+      <th>Dedication</th>
+      <th>Performance</th>
+      <th>Cooperation</th>
+      <th>Initiative</th>
+      <th>Communication</th>
+      <th>Character</th>
+      <th>Responsiveness</th>
+      <th>Personality</th>
+      <th>Appearance</th>
+      <th>Workhabit</th>
+      <th>Grader application</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody style="color: #FF0000">
+    <% @evaluations.each do |evaluation| %>
+      <tr>
+        <td><%= evaluation.InstructorName %></td>
+        <td><%= evaluation.StudentName %></td>
+        <td><%= evaluation.CourseNumber %></td>
+        <td><%= evaluation.Dedication %></td>
+        <td><%= evaluation.Performance %></td>
+        <td><%= evaluation.Cooperation %></td>
+        <td><%= evaluation.Initiative %></td>
+        <td><%= evaluation.Communication %></td>
+        <td><%= evaluation.Character %></td>
+        <td><%= evaluation.Responsiveness %></td>
+        <td><%= evaluation.Personality %></td>
+        <td><%= evaluation.Appearance %></td>
+        <td><%= evaluation.WorkHabit %></td>
+        <td><%= evaluation.grader_application_id %></td>
+        <td><%= link_to 'Show', evaluation %></td>
+        <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
+        <td><%= link_to 'Destroy', evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Evaluation', new_evaluation_path %>

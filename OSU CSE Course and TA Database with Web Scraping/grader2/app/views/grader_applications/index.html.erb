@@ -1,0 +1,54 @@
+<style>
+    h1 {
+    	background-color: red;
+    	color: white;
+    	text-align: center;
+    	font-family: serif;
+    	padding: 50px;
+    	font-size: 24px;
+    }
+    table{
+        background-color: #d4d4d4;
+        font-family: serif;
+    }
+    table tbody tr td{
+    	font-family: sans-serif;
+    }
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Grader Applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>GPA</th>
+      <th>Interested course</th>
+      <th>Available times</th>
+      <th>Course section</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grader_applications.each do |grader_application| %>
+      <tr>
+        <td><%= grader_application.Name %></td>
+        <td><%= grader_application.Email %></td>
+        <td><%= grader_application.GPA %></td>
+        <td><%= grader_application.InterestedCourses %></td>
+        <td><%= grader_application.AvailableTimes %></td>
+        <td><%= grader_application.course_section_id %></td>
+        <td><%= link_to 'Show', grader_application %></td>
+        <td><%= link_to 'Edit', edit_grader_application_path(grader_application) %></td>
+        <td><%= link_to 'Destroy', grader_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Grader Application', new_grader_application_path %>

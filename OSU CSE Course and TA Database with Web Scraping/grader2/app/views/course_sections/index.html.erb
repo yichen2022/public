@@ -1,0 +1,59 @@
+<style>
+    h1 {
+    	background-color: red;
+    	color: white;
+    	text-align: center;
+    	font-family: sans-serif;
+    	padding: 50px;
+    	font-size: 24px;
+    }
+    table{
+        background-color: gray;
+        font-family: seriv;
+        color: white;
+    }
+    table tbody tr td{
+    	font-family: sans-serif;
+    }
+</style>
+<p id="notice"><%= notice %></p>
+
+<%= button_to 'Reseed', reseed_url %>
+<%= link_to '<button type="button">Graders</button>'.html_safe, section_grader_sets_path %>
+
+<h1>Course Sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Classnumber</th>
+      <th>Component</th>
+      <th>Location</th>
+      <th>Times</th>
+      <th>Instructor</th>
+      <th>Session</th>
+      <th>Topic</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @course_sections.all.each do |course_section| %>
+      <tr>
+        <td><%= course_section.Name %></td>
+        <td><%= course_section.ClassNumber %></td>
+        <td><%= course_section.Component %></td>
+        <td><%= course_section.Location %></td>
+        <td><%= course_section.Times %></td>
+        <td><%= course_section.Instructor %></td>
+        <td><%= course_section.Session %></td>
+        <td><%= course_section.Topic %></td>
+        <td><%= link_to '<button type="button">See Graders</button>'.html_safe, section_grader_sets_path %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

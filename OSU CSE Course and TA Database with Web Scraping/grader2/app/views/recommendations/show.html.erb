@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Instructorname:</strong>
+  <%= @recommendation.InstructorName %>
+</p>
+
+<p>
+  <strong>Instructordepartment:</strong>
+  <%= @recommendation.InstructorDepartment %>
+</p>
+
+<p>
+  <strong>Instructorcourse:</strong>
+  <%= @recommendation.InstructorCourse %>
+</p>
+
+<p>
+  <strong>Instructoremail:</strong>
+  <%= @recommendation.InstructorEmail %>
+</p>
+
+<p>
+  <strong>Studentname:</strong>
+  <%= @recommendation.StudentName %>
+</p>
+
+<p>
+  <strong>Recommendation:</strong>
+  <%= @recommendation.Recommendation %>
+</p>
+
+<p>
+  <strong>Grader application:</strong>
+  <%= @recommendation.grader_application_id %>
+</p>
+
+<%= link_to 'Edit', edit_recommendation_path(@recommendation) %> |
+<%= link_to 'Back', recommendations_path %>

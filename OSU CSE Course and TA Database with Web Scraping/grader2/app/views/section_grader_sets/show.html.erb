@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course section:</strong>
+  <%= @section_grader_set.course_section_id %>
+</p>
+
+<p>
+  <strong>Course number:</strong>
+  <%= @section_grader_set.CourseNumber %>
+</p>
+
+<p>
+  <strong>Names:</strong>
+  <%= @section_grader_set.Names %>
+</p>
+
+<%= link_to 'Edit', edit_section_grader_set_path(@section_grader_set) %> |
+<%= link_to 'Back', section_grader_sets_path %>

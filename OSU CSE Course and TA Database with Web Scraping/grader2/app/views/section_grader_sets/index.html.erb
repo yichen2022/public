@@ -1,0 +1,47 @@
+<style>
+h1 {
+	text-align: center;
+	background-color: red;
+	color: white;
+}
+table {
+	background-color: grey;
+	color: white;
+}
+table tbody tr td{
+    	font-family: serif;
+    }
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Graders</h1>
+
+<table style = "background-color: #ADD8E6">
+  <thead>
+    <tr>
+      <th>Course section</th>
+      <th>Course number</th>
+      <th>Names</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @section_grader_sets.each do |section_grader_set| %>
+      <tr>
+        <td><%= section_grader_set.course_section_id %></td>
+        <td><%= section_grader_set.CourseNumber %></td>
+        <td><%= section_grader_set.Names %></td>
+        <td><%= link_to 'Show', section_grader_set %></td>
+        <td><%= link_to 'Edit', edit_section_grader_set_path(section_grader_set) %></td>
+        <td><%= link_to 'Destroy', section_grader_set, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back', course_sections_path %>
+<%= link_to 'New Section Grader Set', new_section_grader_set_path %>

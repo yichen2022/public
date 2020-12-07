@@ -1,0 +1,47 @@
+<%= form_with(model: recommendation, local: true) do |form| %>
+  <% if recommendation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recommendation.errors.count, "error") %> prohibited this recommendation from being saved:</h2>
+
+      <ul>
+        <% recommendation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Instructor_Name %>
+    <%= form.text_field :InstructorName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Instructor_Course %>
+    <%= form.select :InstructorCourse, ['', 1110, 1111, 1113, 1114, 1221, 1222, 1223, 2111, 2112, 2122, 2123, 2133, 2221, 2231, 2321, 2331, 2421, 2431, 2501, 3231, 3232, 3241, 3244, 3321, 3341, 3421, 3461, 3521, 3541, 3901, 3902, 3903, 4191, 4193, 4251, 4252, 4253, 4256, 4471, 5052, 5234, 5235, 5236, 5242, 5243, 5245, 5343, 5351, 5361, 5432, 5433, 5441, 5462, 5463, 5472, 5473, 5522, 5523, 5524, 5525, 5526, 5531, 5542, 5543, 5544, 5545, 5891, 5911, 5912, 5913, 5914, 5915, 6231, 6321, 6331, 6333, 6341, 6421, 6422, 6431, 6441, 6461] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Instructor_Email %>
+    <%= form.text_field :InstructorEmail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Student_Name %>
+    <%= form.text_field :StudentName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Recommendation %>
+    <%= form.rich_text_area :Recommendation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grader_application_id %>
+    <%= form.number_field :grader_application_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
