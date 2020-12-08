@@ -19,7 +19,7 @@
 <p id="notice"><%= notice %></p>
 
 <%= button_to 'Reseed', reseed_url %>
-<%= link_to '<button type="button">Graders</button>'.html_safe, section_grader_sets_path %>
+<%= link_to '<button type="button">See Graders</button>'.html_safe, section_grader_sets_path %>
 
 <h1>Course Sections</h1>
 
@@ -49,7 +49,6 @@
         <td><%= course_section.Instructor %></td>
         <td><%= course_section.Session %></td>
         <td><%= course_section.Topic %></td>
-        <td><%= link_to '<button type="button">See Graders</button>'.html_safe, section_grader_sets_path %></td>
       </tr>
     <% end %>
   </tbody>
