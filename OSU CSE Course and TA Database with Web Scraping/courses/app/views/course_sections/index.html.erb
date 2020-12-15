@@ -1,4 +1,3 @@
-<%= button_to 'Scrape', scrape_course_sections_path %>
 <h1>Course Sections</h1>
 
 <table>
@@ -27,14 +26,8 @@
         <td><%= course_section.Instructor %></td>
         <td><%= course_section.Session %></td>
         <td><%= course_section.Topic %></td>
-        <td><%= link_to 'Show', course_section %></td>
-        <td><%= link_to 'Edit', edit_course_section_path(course_section) %></td>
-        <td><%= link_to 'Destroy', course_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Course Section', new_course_section_path %>
