@@ -6,7 +6,6 @@ one:
   GPA: MyString
   InterestedCourses: MyString
   AvailableTimes: MyString
-  course_section_id: 1
 
 two:
   Name: MyString
@@ -14,4 +13,3 @@ two:
   GPA: MyString
   InterestedCourses: MyString
   AvailableTimes: MyString
-  course_section_id: 1
