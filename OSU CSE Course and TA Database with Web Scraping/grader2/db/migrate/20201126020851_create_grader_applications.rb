@@ -6,7 +6,6 @@ class CreateGraderApplications < ActiveRecord::Migration[6.0]
       t.string :GPA
       t.string :InterestedCourses
       t.string :AvailableTimes
-      t.integer :course_section_id
 
       t.timestamps
     end
