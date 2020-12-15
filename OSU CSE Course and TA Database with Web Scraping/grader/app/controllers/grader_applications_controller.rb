@@ -69,6 +69,6 @@ class GraderApplicationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def grader_application_params
-      params.require(:grader_application).permit(:Name, :Email, :GPA, :InterestedCourses, :AvailableTimes, :course_section_id)
+      params.require(:grader_application).permit(:Name, :Email, :GPA, :InterestedCourses, :AvailableTimes)
     end
 end
