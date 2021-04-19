@@ -1,3 +1,0 @@
-program
- int X ;
- begin X=127; write X; end
