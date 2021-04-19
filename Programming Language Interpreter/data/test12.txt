@@ -1,0 +1,15 @@
+program int X1Y2, X4Y5; int X2Y3, X3Y4, X7Y8;
+
+          begin X1Y2 = 0; X2Y3 = 1; X3Y4 = 1; read X4Y5;
+
+               while (X1 >= X4) loop
+
+                                X7Y8 = X2Y3 - X3Y4; X3Y4 = X2Y3;
+
+                                X7Y8 = X3Y4; X1Y2 = X1Y2 - 1;
+
+                            end;
+
+               write X2Y3;
+
+          end

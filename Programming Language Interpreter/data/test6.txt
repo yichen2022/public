@@ -1,0 +1,16 @@
+program int ABC, D;
+
+          begin read ABC; read D;
+
+               while (ABC === D || ABC > 0) loop
+                                     if (ABC >= D && ABC < 10) then ABC = ABC + D;
+
+                                     else D = D - ABC;
+
+                                end;
+
+                            end;
+
+               write C;
+
+          end
